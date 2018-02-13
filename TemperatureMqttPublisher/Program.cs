@@ -26,6 +26,8 @@ namespace TemperatureMqttPublisher
                 double temperature = 20 + 5 * Math.Sin(i / 10.0);
                 string strValue = Convert.ToString(temperature);
 
+                Console.WriteLine("temperature: " + temperature);
+
                 myClient.Publish("measurements/temperature", Encoding.UTF8.GetBytes(strValue));
                 Thread.Sleep(1000);
             }
