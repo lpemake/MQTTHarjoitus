@@ -26,6 +26,8 @@ namespace PressureMqttPublisher
                 double pressure = 1024 + 5 * Math.Cos(i / 10.0);
                 string strValue = Convert.ToString(pressure);
 
+                Console.WriteLine(pressure);
+
                 myClient.Publish("measurements/pressure", Encoding.UTF8.GetBytes(strValue));
                 Thread.Sleep(1000);
             }
