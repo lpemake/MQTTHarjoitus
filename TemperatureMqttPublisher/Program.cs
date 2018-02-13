@@ -23,7 +23,7 @@ namespace TemperatureMqttPublisher
 
             for (int i = 0; i < 100; i++)
             {
-                double temperature = 20 + 5 * Math.Sin(i / 10.0);
+                double temperature = 20 + 5 * Math.Sin(i / 15.0);
                 string strValue = Convert.ToString(temperature);
 
                 Console.WriteLine("temperature: " + temperature);
